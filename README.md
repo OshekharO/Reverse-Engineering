@@ -15,7 +15,7 @@ Your contributions and suggestions are heartily♥ welcome. (✿◕‿◕).
 * [X8 Sandbox](https://4pda.to/forum/index.php?showtopic=1004655)
 * [F1 VM](https://play.google.com/store/apps/details?id=com.f1player.play)
 
-## Tools
+## Tools For Android
 
 * [Apk Editor](https://4pda.to/forum/index.php?showtopic=575450)
 * [Apkanalyzer](https://4pda.to/forum/index.php?showtopic=1037391)
@@ -36,7 +36,7 @@ Your contributions and suggestions are heartily♥ welcome. (✿◕‿◕).
 * [Lucky Patcher](https://4pda.to/forum/index.php?showtopic=298302)
 * [Jasi Patcher](https://4pda.to/forum/index.php?showtopic=780420)
 
-## Important Stuff
+## Tools For PC
 
 * [ApkRepacker](https://github.com/MrIkso/ApkRepacker)
 * [ArscEditor](https://github.com/MrIkso/ArscEditor)
