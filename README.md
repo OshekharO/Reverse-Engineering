@@ -33,6 +33,7 @@ Your contributions and suggestions are heartily♥ welcome. (✿◕‿◕).
 * [ApkToolPatcher](https://4pda.to/forum/index.php?showtopic=882654)
 * [Java2Smali]()
 * [mHook]()
+* [BlackDex](https://github.com/CodingGay/BlackDex)
 * [Http Canary](https://4pda.to/forum/index.php?showtopic=957572&st=60#entry92625117)
 * [Lucky Patcher](https://4pda.to/forum/index.php?showtopic=298302)
 * [Jasi Patcher](https://4pda.to/forum/index.php?showtopic=780420)
