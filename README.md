@@ -40,6 +40,7 @@ Your contributions and suggestions are heartily♥ welcome. (✿◕‿◕).
 * [Jasi Patcher](https://4pda.to/forum/index.php?showtopic=780420)
 * [Ads Regex](https://www.mediafire.com/file/c6rodlk41myp423/Ads_Regex_3.0.apk/file)
 * [Anti-Split](https://www.mediafire.com/file/w144fccetgrrny7/AntiSplit-Merge.apk/file)
+* [APKKiller](https://github.com/aimardcr/APKKiller)
 
 ## Tools For PC
 
