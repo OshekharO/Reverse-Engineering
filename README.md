@@ -10,6 +10,7 @@ Your contributions and suggestions are heartily♥ welcome. (✿◕‿◕).
 
 ## Android Emulator
 
+* [VPhoneGaGa](https://drive.google.com/uc?id=18uy6qDK7kJKPbTgsguOpBMm9Q2HnDn4B&export=download)
 * [Twoyi](https://4pda.to/forum/index.php?showtopic=1041895)
 * [Vmos Pro](https://4pda.to/forum/index.php?showtopic=961828)
 * [X8 Sandbox](https://4pda.to/forum/index.php?showtopic=1004655)
@@ -17,13 +18,14 @@ Your contributions and suggestions are heartily♥ welcome. (✿◕‿◕).
 
 ## Tools For Android
 
+* [Apk Editor Pro](https://www.mediafire.com/file/j7mwwbhn27gpkpt/Apk_Editor_v.2.3.4-MinAPI26.apk/file)
 * [Apk Editor](https://www.mediafire.com/file/wcudjowobba978g/APK_Editor_Pro.apk/file)
 * [Apkanalyzer](https://4pda.to/forum/index.php?showtopic=1037391)
 * [StringsXML Translator](https://4pda.to/forum/index.php?showtopic=960772)
 * [AE Manager](https://www.mediafire.com/file/u0o80ibqhcee95b/AE+Manager(Pink).apk/file)
 * [MT Manager](https://4pda.to/forum/index.php?showtopic=548542)
 * [NP Manager](https://4pda.to/forum/index.php?showtopic=966965)
-* [APKTOOL M](https://4pda.to/forum/index.php?showtopic=1002506)
+* [APKTOOL M](https://maximoff.su/apktool/?lang=en)
 * [Smali Helper](https://smalihelper.blogspot.com/)
 * [M-Patcher](https://maximoff.su/mpatcher/)
 * [Developer Assistant](https://4pda.to/forum/index.php?showtopic=897774)
@@ -31,7 +33,7 @@ Your contributions and suggestions are heartily♥ welcome. (✿◕‿◕).
 * [Patches](https://4pda.to/forum/index.php?showtopic=575450&st=17480#entry109934480)
 * [Android IDE](http://androidide.com)
 * [ApkToolPatcher](https://4pda.to/forum/index.php?showtopic=882654)
-* [Java2Smali](https://www.mediafire.com/file/njnocetm9tm12ao/Java2Smali_2.7-release.apk/file)
+* [Java2Smali](https://www.mediafire.com/file/4xk0cde1t27nxmy/Java2Smali_3.2-release.apk/file)
 * [ProxyHooks](https://www.mediafire.com/file/d2t88bahph1gboe/ProxyHooks_v2.0.dex/file)
 * [mHook](https://www.mediafire.com/file/0i1w09zhuwbuxxe/mHook%25E7%25AE%25A1%25E7%2590%2586%25E5%2599%25A8.apk/file)
 * [BlackDex](https://github.com/CodingGay/BlackDex)
@@ -44,6 +46,7 @@ Your contributions and suggestions are heartily♥ welcome. (✿◕‿◕).
 
 ## Tools For PC
 
+* [DTL-X](https://github.com/Gameye98/DTL-X)
 * [ApkRepacker](https://github.com/MrIkso/ApkRepacker)
 * [ArscEditor](https://github.com/MrIkso/ArscEditor)
 * [CodeEditor](https://github.com/MrIkso/CodeEditor-1)
