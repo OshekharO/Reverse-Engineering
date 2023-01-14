@@ -67,9 +67,10 @@ Your contributions and suggestions are heartily♥ welcome. (✿◕‿◕).
 * [Practical Reverse Engineering](http://www.wiley.com/WileyCDA/WileyTitle/productCd-1118787315.html) by Bruce Dang et al., 2014
 * [Reverse Engineering for Beginners](http://beginners.re/) by Dennis Yurichev
 * [The IDA Pro Book](https://nostarch.com/idapro2.htm) by Chris Eagle, 2011
+* [Malware Gems](https://github.com/0x4143/malware-gems) by 0x4143
 
 ## Community
 
 * [4PDA](https://4pda.to)
 ---
-<h4 align='center'>© 2022 ツ ѕнєкнєя</h4>
+<h4 align='center'>© 2023 ツ ѕнєкнєя</h4>
