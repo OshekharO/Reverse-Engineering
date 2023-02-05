@@ -4,7 +4,9 @@
 
 > A collection of awesome Android app reverse engineering resources.
 
-[Reverse Engineering]() is the practice of reversing codes without authorisation, it's done with the aim of removing ads or upgrading to premium from Android application without paying anything.
+[Reverse Engineering]() is the practice of reversing codes without authorisation, it's done with the aim of customising the existing application as per your thinking.
+
+I mostly provide application with no or minimal virus detection. Also these applications are not created by me so I am not liable for anything.
 
 Your contributions and suggestions are heartily♥ welcome. (✿◕‿◕). 
 
