@@ -19,8 +19,8 @@ Your contributions and suggestions are heartily♥ welcome. (✿◕‿◕).
 * [F1 VM](https://4pda.to/forum/index.php?showtopic=1004655)
 
 ## Tools For Android
-
 * [Apk Editor Pro](https://www.mediafire.com/file/j7mwwbhn27gpkpt/Apk_Editor_v.2.3.4-MinAPI26.apk/file)
+* [Apk Editor UI](https://www.mediafire.com/file/pdj39cn9gc5fh6t/APK_Editor_UI_v3.0.6_Final_Release.apk/file)
 * [Apk Editor](https://www.mediafire.com/file/wcudjowobba978g/APK_Editor_Pro.apk/file)
 * [Apkanalyzer](https://4pda.to/forum/index.php?showtopic=1037391)
 * [StringsXML Translator](https://4pda.to/forum/index.php?showtopic=960772)
@@ -48,7 +48,6 @@ Your contributions and suggestions are heartily♥ welcome. (✿◕‿◕).
 * [Doldrums](https://github.com/rscloura/Doldrums)
 
 ## Tools For PC
-
 * [DTL-X](https://github.com/Gameye98/DTL-X)
 * [ApkRepacker](https://github.com/MrIkso/ApkRepacker)
 * [ArscEditor](https://github.com/MrIkso/ArscEditor)
@@ -65,7 +64,6 @@ Your contributions and suggestions are heartily♥ welcome. (✿◕‿◕).
 * [Bytecode Viewer](https://github.com/Konloch/bytecode-viewer)
 
 ## Tutorial
-
 * [Understand Smali](https://github.com/OshekharO/Reverse-Engineering/wiki) by AbhiTheModder
 * [Practical Reverse Engineering](http://www.wiley.com/WileyCDA/WileyTitle/productCd-1118787315.html) by Bruce Dang et al., 2014
 * [Reverse Engineering for Beginners](http://beginners.re/) by Dennis Yurichev
