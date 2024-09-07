@@ -29,7 +29,9 @@ List of some great Android Emulators:
 
 Great tools for Android App Development:
 
-- [ApkEditor Pro](https://github.com/timscriptov/ApkEditor?tab=readme-ov-file)
+- [ApkEditor Pro](https://github.com/timscriptov/ApkEditor)
+- [AXML Editor](https://github.com/AbdurazaaqMohammed/AXML-Editor)
+- [XML Editor](https://gofile.io/d/YLU7pP)
 - [Jasi Patcher](https://jasi2169.com/jasi-patcher/)
 - [Apkanalyzer](https://4pda.to/forum/index.php?showtopic=1037391)
 - [MT Manager](https://4pda.to/forum/index.php?showtopic=548542)
