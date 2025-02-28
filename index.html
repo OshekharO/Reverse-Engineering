@@ -27,6 +27,8 @@
             background: linear-gradient(145deg, #1e1e1e, #2d2d2d);
             border-radius: 12px;
             transition: transform 0.2s ease;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
         }
 
         .category-card:hover {
@@ -39,6 +41,8 @@
             padding: 0.75rem 1rem;
             border-radius: 8px;
             transition: all 0.2s ease;
+            display: block;
+            margin-bottom: 0.5rem;
         }
 
         .tool-link:hover {
@@ -50,10 +54,13 @@
             background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem;
         }
 
         .footer {
             background-color: #000;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
         }
 
         .footer a {
@@ -63,6 +70,17 @@
 
         .footer a:hover {
             color: #fff;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .category-card {
+                padding: 1rem;
+            }
+
+            .tool-link {
+                padding: 0.5rem;
+            }
         }
     </style>
 </head>
@@ -92,27 +110,19 @@
         <!-- Android Emulators -->
         <section class="mb-5">
             <h2 class="section-header h3 fw-bold mb-4"><i class="bi bi-phone me-2"></i>Android Emulators</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="category-card p-4 h-100">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="category-card">
                         <h3 class="h5 mb-3">Virtualization Tools</h3>
-                        <div class="d-flex flex-column gap-2">
-                            <a href="https://play.google.com/store/apps/details?id=com.pspace.vandroid"
-                               class="tool-link" target="_blank">Virtual Android</a>
-                            <a href="https://drive.google.com/uc?id=18uy6qDK7kJKPbTgsguOpBMm9Q2HnDn4B&export=download"
-                               class="tool-link" target="_blank">VPhoneGaGa</a>
-                            <a href="https://play.google.com/store/apps/details?id=com.redfinger.global"
-                               class="tool-link" target="_blank">RedFinger</a>
-                            <a href="https://github.com/FSpaceCore/SpaceCore/releases"
-                               class="tool-link" target="_blank">DualMeta</a>
-                            <a href="https://4pda.to/forum/index.php?showtopic=1041895"
-                               class="tool-link" target="_blank">Twoyi (Dead)</a>
-                            <a href="https://4pda.to/forum/index.php?showtopic=961828"
-                               class="tool-link" target="_blank">Vmos Pro</a>
-                            <a href="https://4pda.to/forum/index.php?showtopic=1004655"
-                               class="tool-link" target="_blank">X8 Sandbox</a>
-                            <a href="https://4pda.to/forum/index.php?showtopic=1004655"
-                               class="tool-link" target="_blank">F1 VM</a>
+                        <div class="d-flex flex-column">
+                            <a href="https://play.google.com/store/apps/details?id=com.pspace.vandroid" class="tool-link" target="_blank">Virtual Android</a>
+                            <a href="https://drive.google.com/uc?id=18uy6qDK7kJKPbTgsguOpBMm9Q2HnDn4B&export=download" class="tool-link" target="_blank">VPhoneGaGa</a>
+                            <a href="https://play.google.com/store/apps/details?id=com.redfinger.global" class="tool-link" target="_blank">RedFinger</a>
+                            <a href="https://github.com/FSpaceCore/SpaceCore/releases" class="tool-link" target="_blank">DualMeta</a>
+                            <a href="https://4pda.to/forum/index.php?showtopic=1041895" class="tool-link" target="_blank">Twoyi (Dead)</a>
+                            <a href="https://4pda.to/forum/index.php?showtopic=961828" class="tool-link" target="_blank">Vmos Pro</a>
+                            <a href="https://4pda.to/forum/index.php?showtopic=1004655" class="tool-link" target="_blank">X8 Sandbox</a>
+                            <a href="https://4pda.to/forum/index.php?showtopic=1004655" class="tool-link" target="_blank">F1 VM</a>
                         </div>
                     </div>
                 </div>
@@ -122,59 +132,35 @@
         <!-- Mobile Tools -->
         <section class="mb-5">
             <h2 class="section-header h3 fw-bold mb-4"><i class="bi bi-tools me-2"></i>Mobile Tools</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="category-card p-4 h-100">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="category-card">
                         <h3 class="h5 mb-3">APK Modification</h3>
-                        <div class="d-flex flex-column gap-2">
-                            <a href="https://github.com/timscriptov/ApkEditor"
-                               class="tool-link" target="_blank">ApkEditor Pro</a>
-                            <a href="https://github.com/AbdurazaaqMohammed/AXML-Editor"
-                               class="tool-link" target="_blank">AXML Editor</a>
-                            <a href="https://gofile.io/d/YLU7pP"
-                               class="tool-link" target="_blank">XML Editor</a>
-                            <a href="https://jasi2169.com/jasi-patcher/"
-                               class="tool-link" target="_blank">Jasi Patcher</a>
-                            <a href="https://4pda.to/forum/index.php?showtopic=1037391"
-                               class="tool-link" target="_blank">Apkanalyzer</a>
-                            <a href="https://4pda.to/forum/index.php?showtopic=548542"
-                               class="tool-link" target="_blank">MT Manager</a>
-                            <a href="https://4pda.to/forum/index.php?showtopic=966965"
-                               class="tool-link" target="_blank">NP Manager</a>
-                            <a href="https://maximoff.su/apktool/?lang=en"
-                               class="tool-link" target="_blank">APKTOOL M</a>
-                            <a href="https://smalihelper.blogspot.com/"
-                               class="tool-link" target="_blank">Smali Helper</a>
-                            <a href="https://maximoff.su/mpatcher/"
-                               class="tool-link" target="_blank">M-Patcher</a>
-                            <a href="https://github.com/Maximoff/AEPatcher"
-                               class="tool-link" target="_blank">AEPatcher</a>
-                            <a href="https://4pda.to/forum/index.php?showtopic=897774"
-                               class="tool-link" target="_blank">Developer Assistant</a>
-                            <a href="https://4pda.to/forum/index.php?showtopic=958291"
-                               class="tool-link" target="_blank">Dev Tools Pro</a>
-                            <a href="https://4pda.to/forum/index.php?showtopic=575450&view=findpost&p=62744086"
-                               class="tool-link" target="_blank">Patches</a>
-                            <a href="http://androidide.com"
-                               class="tool-link" target="_blank">Android IDE</a>
-                            <a href="https://4pda.to/forum/index.php?showtopic=882654"
-                               class="tool-link" target="_blank">ApkToolPatcher</a>
-                            <a href="https://gofile.io/d/HDln2J"
-                               class="tool-link" target="_blank">Java2Smali</a>
-                            <a href="https://github.com/CodingGay/BlackDex"
-                               class="tool-link" target="_blank">BlackDex</a>
-                            <a href="https://4pda.to/forum/index.php?showtopic=957572&st=60#entry92625117"
-                               class="tool-link" target="_blank">Http Canary</a>
-                            <a href="https://play.google.com/store/apps/details?id=com.reqable.android"
-                               class="tool-link" target="_blank">Reqable</a>
-                            <a href="https://4pda.to/forum/index.php?showtopic=298302"
-                               class="tool-link" target="_blank">Lucky Patcher</a>
-                            <a href="https://4pda.to/forum/index.php?showtopic=780420"
-                               class="tool-link" target="_blank">Jasi Patcher</a>
-                            <a href="https://www.pling.com/p/2175692"
-                               class="tool-link" target="_blank">Ads Regex</a>
-                            <a href="https://github.com/AbdurazaaqMohammed/AntiSplit-M"
-                               class="tool-link" target="_blank">Anti-Split</a>
+                        <div class="d-flex flex-column">
+                            <a href="https://github.com/timscriptov/ApkEditor" class="tool-link" target="_blank">ApkEditor Pro</a>
+                            <a href="https://github.com/AbdurazaaqMohammed/AXML-Editor" class="tool-link" target="_blank">AXML Editor</a>
+                            <a href="https://gofile.io/d/YLU7pP" class="tool-link" target="_blank">XML Editor</a>
+                            <a href="https://jasi2169.com/jasi-patcher/" class="tool-link" target="_blank">Jasi Patcher</a>
+                            <a href="https://4pda.to/forum/index.php?showtopic=1037391" class="tool-link" target="_blank">Apkanalyzer</a>
+                            <a href="https://4pda.to/forum/index.php?showtopic=548542" class="tool-link" target="_blank">MT Manager</a>
+                            <a href="https://4pda.to/forum/index.php?showtopic=966965" class="tool-link" target="_blank">NP Manager</a>
+                            <a href="https://maximoff.su/apktool/?lang=en" class="tool-link" target="_blank">APKTOOL M</a>
+                            <a href="https://smalihelper.blogspot.com/" class="tool-link" target="_blank">Smali Helper</a>
+                            <a href="https://maximoff.su/mpatcher/" class="tool-link" target="_blank">M-Patcher</a>
+                            <a href="https://github.com/Maximoff/AEPatcher" class="tool-link" target="_blank">AEPatcher</a>
+                            <a href="https://4pda.to/forum/index.php?showtopic=897774" class="tool-link" target="_blank">Developer Assistant</a>
+                            <a href="https://4pda.to/forum/index.php?showtopic=958291" class="tool-link" target="_blank">Dev Tools Pro</a>
+                            <a href="https://4pda.to/forum/index.php?showtopic=575450&view=findpost&p=62744086" class="tool-link" target="_blank">Patches</a>
+                            <a href="http://androidide.com" class="tool-link" target="_blank">Android IDE</a>
+                            <a href="https://4pda.to/forum/index.php?showtopic=882654" class="tool-link" target="_blank">ApkToolPatcher</a>
+                            <a href="https://gofile.io/d/HDln2J" class="tool-link" target="_blank">Java2Smali</a>
+                            <a href="https://github.com/CodingGay/BlackDex" class="tool-link" target="_blank">BlackDex</a>
+                            <a href="https://4pda.to/forum/index.php?showtopic=957572&st=60#entry92625117" class="tool-link" target="_blank">Http Canary</a>
+                            <a href="https://play.google.com/store/apps/details?id=com.reqable.android" class="tool-link" target="_blank">Reqable</a>
+                            <a href="https://4pda.to/forum/index.php?showtopic=298302" class="tool-link" target="_blank">Lucky Patcher</a>
+                            <a href="https://4pda.to/forum/index.php?showtopic=780420" class="tool-link" target="_blank">Jasi Patcher</a>
+                            <a href="https://www.pling.com/p/2175692" class="tool-link" target="_blank">Ads Regex</a>
+                            <a href="https://github.com/AbdurazaaqMohammed/AntiSplit-M" class="tool-link" target="_blank">Anti-Split</a>
                         </div>
                     </div>
                 </div>
@@ -184,31 +170,21 @@
         <!-- PC Tools -->
         <section class="mb-5">
             <h2 class="section-header h3 fw-bold mb-4"><i class="bi bi-pc me-2"></i>Desktop Tools</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="category-card p-4 h-100">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="category-card">
                         <h3 class="h5 mb-3">Analysis Suite</h3>
-                        <div class="d-flex flex-column gap-2">
-                            <a href="https://github.com/REAndroid/APKEditor"
-                               class="tool-link" target="_blank">APKEditor</a>
-                            <a href="https://github.com/Gameye98/DTL-X"
-                               class="tool-link" target="_blank">DTL-X</a>
-                            <a href="https://github.com/MrIkso/ApkRepacker"
-                               class="tool-link" target="_blank">ApkRepacker</a>
-                            <a href="https://github.com/MrIkso/ArscEditor"
-                               class="tool-link" target="_blank">ArscEditor</a>
-                            <a href="https://github.com/rizinorg/cutter"
-                               class="tool-link" target="_blank">cutter</a>
-                            <a href="https://ibotpeaches.github.io/Apktool/"
-                               class="tool-link" target="_blank">Apktool</a>
-                            <a href="https://github.com/pxb1988/dex2jar"
-                               class="tool-link" target="_blank">DEX2JAR</a>
-                            <a href="https://github.com/vaibhavpandeyvpz/apkstudio"
-                               class="tool-link" target="_blank">Apk Studio</a>
-                            <a href="https://forum.xda-developers.com/t/tool-windows-apk-easy-tool-v1-59-2-2021-04-03.3333960/"
-                               class="tool-link" target="_blank">APK Easy Tool</a>
-                            <a href="https://github.com/Konloch/bytecode-viewer"
-                               class="tool-link" target="_blank">Bytecode Viewer</a>
+                        <div class="d-flex flex-column">
+                            <a href="https://github.com/REAndroid/APKEditor" class="tool-link" target="_blank">APKEditor</a>
+                            <a href="https://github.com/Gameye98/DTL-X" class="tool-link" target="_blank">DTL-X</a>
+                            <a href="https://github.com/MrIkso/ApkRepacker" class="tool-link" target="_blank">ApkRepacker</a>
+                            <a href="https://github.com/MrIkso/ArscEditor" class="tool-link" target="_blank">ArscEditor</a>
+                            <a href="https://github.com/rizinorg/cutter" class="tool-link" target="_blank">cutter</a>
+                            <a href="https://ibotpeaches.github.io/Apktool/" class="tool-link" target="_blank">Apktool</a>
+                            <a href="https://github.com/pxb1988/dex2jar" class="tool-link" target="_blank">DEX2JAR</a>
+                            <a href="https://github.com/vaibhavpandeyvpz/apkstudio" class="tool-link" target="_blank">Apk Studio</a>
+                            <a href="https://forum.xda-developers.com/t/tool-windows-apk-easy-tool-v1-59-2-2021-04-03.3333960/" class="tool-link" target="_blank">APK Easy Tool</a>
+                            <a href="https://github.com/Konloch/bytecode-viewer" class="tool-link" target="_blank">Bytecode Viewer</a>
                         </div>
                     </div>
                 </div>
@@ -218,32 +194,27 @@
         <!-- Learning Resources -->
         <section class="mb-5">
             <h2 class="section-header h3 fw-bold mb-4"><i class="bi bi-journal-bookmark me-2"></i>Learning Resources</h2>
-            <div class="row g-4">
+            <div class="row">
                 <div class="col-md-6">
-                    <div class="category-card p-4 h-100">
-                        <div class="d-flex flex-column gap-3">
-                            <a href="https://github.com/OshekharO/Reverse-Engineering/wiki"
-                               class="tool-link" target="_blank">
+                    <div class="category-card">
+                        <div class="d-flex flex-column">
+                            <a href="https://github.com/OshekharO/Reverse-Engineering/wiki" class="tool-link" target="_blank">
                                 <i class="bi bi-file-text me-2"></i>
                                 Smali Basics Guide
                             </a>
-                            <a href="http://www.wiley.com/WileyCDA/WileyTitle/productCd-1118787315.html"
-                               class="tool-link" target="_blank">
+                            <a href="http://www.wiley.com/WileyCDA/WileyTitle/productCd-1118787315.html" class="tool-link" target="_blank">
                                 <i class="bi bi-book me-2"></i>
                                 Practical Reverse Engineering
                             </a>
-                            <a href="http://beginners.re/"
-                               class="tool-link" target="_blank">
+                            <a href="http://beginners.re/" class="tool-link" target="_blank">
                                 <i class="bi bi-book me-2"></i>
                                 Understanding Assembly Language
                             </a>
-                            <a href="https://nostarch.com/idapro2.htm"
-                               class="tool-link" target="_blank">
+                            <a href="https://nostarch.com/idapro2.htm" class="tool-link" target="_blank">
                                 <i class="bi bi-book me-2"></i>
                                 IDA Pro Book
                             </a>
-                            <a href="https://iha089.org.in/apk-reverse-engineering/"
-                               class="tool-link" target="_blank">
+                            <a href="https://iha089.org.in/apk-reverse-engineering/" class="tool-link" target="_blank">
                                 <i class="bi bi-book me-2"></i>
                                 Understanding Reverse Engineering
                             </a>
@@ -254,7 +225,7 @@
         </section>
     </main>
 
-    <footer class="footer py-4">
+    <footer class="footer">
         <div class="container text-center text-muted">
             <p class="mb-2">Maintained with <i class="bi bi-heart-fill text-danger"></i> by OshekharO</p>
             <p class="mb-0 small">&copy; 2025 Saksham Shekher.</p>
