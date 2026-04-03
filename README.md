@@ -183,6 +183,5 @@ Please ensure any added resources are publicly available, relevant, and not mali
 ---
 
 <p align="center">
-  Made with ❤️ by <a href="https://github.com/OshekharO">OshekharO</a> · 
-  <a href="https://saksham.thedev.id/Reverse-Engineering/">Live Website</a>
+  Made with ❤️ by <a href="https://github.com/OshekharO">OshekharO</a>
 </p>
