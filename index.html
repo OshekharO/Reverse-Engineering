@@ -3,322 +3,880 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Android Reverse Engineering Resources | Tools & Guides</title>
+    <title>Android Reverse Engineering Resources | Tools &amp; Guides</title>
     <meta name="description" content="Comprehensive collection of Android reverse engineering tools, emulators, tutorials, and community resources">
     <meta name="keywords" content="Android Reverse Engineering,Reverse Engineering Tools,Android Emulators,MT Manager,APK Editor,APKTOOL,Android Modding,Android Debugging,Android App Reverse Engineering,Virtual Android,Vmos Pro,Android Tools,Android Tutorials,Android Learning Resources,Android Reverse Engineering Guide">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://saksham.thedev.id/Reverse-Engineering/">
-    <meta property="og:title" content="Android Reverse Engineering Resources | Tools & Guides">
+    <meta property="og:title" content="Android Reverse Engineering Resources | Tools &amp; Guides">
     <meta property="og:description" content="Comprehensive collection of Android reverse engineering tools, emulators, tutorials, and community resources">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://saksham.thedev.id/Reverse-Engineering/">
-    <meta property="twitter:title" content="Android Reverse Engineering Resources | Tools & Guides">
+    <meta property="twitter:title" content="Android Reverse Engineering Resources | Tools &amp; Guides">
     <meta property="twitter:description" content="Comprehensive collection of Android reverse engineering tools, emulators, tutorials, and community resources">
+
+    <link rel="canonical" href="https://saksham.thedev.id/Reverse-Engineering/">
 
     <!-- Bootstrap 5.3.2 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="canonical" href="https://saksham.thedev.id/Reverse-Engineering/">
-  
+    <!-- Bootstrap Icons 1.11.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
     <style>
-        .category-title {
-            background: linear-gradient(45deg, #6c5ce7, #a66efa);
-            color: white;
-            padding: 1rem;
-            border-radius: 0.5rem;
-            margin: 2rem 0 1rem;
-            font-weight: 700;
-        }
-        
-        .nav-pills {
-            position: sticky;
-            top: 1rem;
-            background: var(--bs-body-bg);
-            z-index: 1000;
-            padding: 1rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
-        }
-        
-        .list-item {
-            transition: all 0.2s ease;
-            border-radius: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .list-item:hover {
-            transform: translateY(-2px);
-            background: var(--bs-primary-bg-subtle);
+        html {
+            scroll-behavior: smooth;
         }
 
-        .accordion-button {
-            background-color: #2d2d2d;
-            color: #e0e0e0;
+        /* Navbar */
+        .navbar-brand span {
+            background: linear-gradient(90deg, #a66efa, #6c5ce7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            border-radius: 1rem;
+            padding: 3rem 2rem;
+        }
+
+        .hero-badge {
+            background: rgba(108, 92, 231, 0.2);
+            border: 1px solid rgba(166, 110, 250, 0.4);
+            color: #a66efa;
+            border-radius: 2rem;
+            padding: 0.35rem 1rem;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        /* Section headings */
+        .section-heading {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.875rem 1.25rem;
+            background: linear-gradient(45deg, #6c5ce7, #a66efa);
+            color: #fff;
             border-radius: 0.5rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .subsection-heading {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--bs-secondary-color);
+            margin: 1.5rem 0 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .subsection-heading::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--bs-border-color);
+        }
+
+        /* Tool cards */
+        .tool-card {
+            background: var(--bs-body-secondary-bg, var(--bs-secondary-bg));
+            border: 1px solid var(--bs-border-color);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-decoration: none;
+            color: var(--bs-body-color);
+            display: flex;
+            flex-direction: column;
+            gap: 0.375rem;
+            transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+            height: 100%;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-3px);
+            border-color: #a66efa;
+            box-shadow: 0 6px 20px rgba(108, 92, 231, 0.25);
+            color: var(--bs-body-color);
+        }
+
+        .tool-card-name {
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tool-card-desc {
+            font-size: 0.8rem;
+            color: var(--bs-secondary-color);
+            line-height: 1.4;
+        }
+
+        .tool-card-link-icon {
+            margin-left: auto;
+            font-size: 0.75rem;
+            color: #a66efa;
+            opacity: 0;
+            transition: opacity 0.18s ease;
+        }
+
+        .tool-card:hover .tool-card-link-icon {
+            opacity: 1;
+        }
+
+        /* Accordion overrides — use Bootstrap CSS vars, no hardcoded colours */
+        .accordion-button {
             font-weight: 600;
         }
 
-        .accordion-button:not(.collapsed) {
-            background-color: #3d3d3d;
+        /* Back-to-top */
+        #back-to-top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 2.75rem;
+            height: 2.75rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6c5ce7, #a66efa);
+            border: none;
             color: #fff;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+            z-index: 1050;
+            box-shadow: 0 4px 15px rgba(108, 92, 231, 0.4);
         }
 
-        .accordion-body {
-            background-color: #2d2d2d;
-            color: #e0e0e0;
-            border-radius: 0.5rem;
-            margin-top: 0.5rem;
+        #back-to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #back-to-top:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Status badges */
+        .badge-active {
+            font-size: 0.65rem;
+            background-color: rgba(25, 135, 84, 0.15);
+            color: #198754;
+            border: 1px solid rgba(25, 135, 84, 0.3);
+        }
+
+        .badge-dead {
+            font-size: 0.65rem;
+            background-color: rgba(220, 53, 69, 0.15);
+            color: #dc3545;
+            border: 1px solid rgba(220, 53, 69, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--bs-border-color);
         }
     </style>
 </head>
 <body class="bg-body-tertiary">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body sticky-top shadow-sm" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#">
+                <i class="bi bi-cpu-fill text-primary"></i>
+                <span>RE Resources</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-1">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#emulators"><i class="bi bi-phone me-1"></i>Emulators</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mobile-tools"><i class="bi bi-tools me-1"></i>Mobile Tools</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pc-tools"><i class="bi bi-pc-display me-1"></i>PC Tools</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#learning"><i class="bi bi-book me-1"></i>Learning</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#community"><i class="bi bi-people me-1"></i>Community</a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-sm btn-outline-primary" href="https://github.com/OshekharO/Reverse-Engineering"
+                           target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-github me-1"></i>GitHub
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
     <div class="container py-4">
-        <header class="text-center mb-5">
-            <h1 class="display-4 fw-bold mb-3">Android Reverse Engineering</h1>
-            <nav class="nav nav-pills justify-content-center gap-2">
-                <a class="nav-link btn btn-primary" href="#emulators">Emulators</a>
-                <a class="nav-link btn btn-primary" href="#mobile-tools">Mobile Tools</a>
-                <a class="nav-link btn btn-primary" href="#pc-tools">PC Tools</a>
-                <a class="nav-link btn btn-primary" href="#learning">Learning Resources</a>
-            </nav>
+        <header class="hero text-center mb-5">
+            <div class="hero-badge"><i class="bi bi-shield-lock me-1"></i>Android Reverse Engineering</div>
+            <h1 class="display-5 fw-bold mb-3">Reverse Engineering Resources</h1>
+            <p class="lead text-body-secondary mb-4 mx-auto" style="max-width:600px">
+                A curated collection of Android reverse engineering tools, emulators, and learning resources.
+                Decompile, analyze, and understand Android apps.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+                <a href="#emulators" class="btn btn-primary btn-sm px-3">
+                    <i class="bi bi-phone me-1"></i>Emulators
+                </a>
+                <a href="#mobile-tools" class="btn btn-primary btn-sm px-3">
+                    <i class="bi bi-tools me-1"></i>Mobile Tools
+                </a>
+                <a href="#pc-tools" class="btn btn-primary btn-sm px-3">
+                    <i class="bi bi-pc-display me-1"></i>PC Tools
+                </a>
+                <a href="#learning" class="btn btn-outline-secondary btn-sm px-3">
+                    <i class="bi bi-book me-1"></i>Learning
+                </a>
+            </div>
         </header>
 
         <main>
-            <!-- Android Emulators Section -->
-            <section id="emulators">
-                <h2 class="category-title">📱 Emulators</h2>
-                <div class="accordion mb-4">
+
+            <!-- ═══════════════════════════════════════════════════════════════
+                 Android Emulators
+            ════════════════════════════════════════════════════════════════ -->
+            <section id="emulators" class="mb-5">
+                <div class="section-heading">
+                    <i class="bi bi-phone"></i>Android Emulators
+                </div>
+
+                <div class="accordion mb-4" id="accordionEmulators">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#emulators-info">
-                                What are Android Emulators?
+                            <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#emulators-info"
+                                    aria-expanded="false" aria-controls="emulators-info">
+                                <i class="bi bi-info-circle me-2"></i>What are Android Emulators?
                             </button>
                         </h2>
-                        <div id="emulators-info" class="accordion-collapse collapse show">
-                            <div class="accordion-body">
-                                Android emulators allow you to run Android applications on your PC or mobile device. They are essential for testing, debugging, and reverse engineering Android apps. Popular emulators like <strong>Virtual Android</strong> and <strong>Vmos Pro</strong> provide a sandboxed environment to analyze apps without affecting your primary device.
+                        <div id="emulators-info" class="accordion-collapse collapse" data-bs-parent="#accordionEmulators">
+                            <div class="accordion-body text-body-secondary">
+                                Android emulators create a <strong>sandboxed virtual Android environment</strong> — ideal for safely testing and analyzing apps without affecting your primary device. They are essential for reverse engineering workflows where you need an isolated space to run, monitor, and modify apps. Popular options like <strong>Virtual Android</strong> and <strong>Vmos Pro</strong> run entirely on Android devices.
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="row g-3">
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://play.google.com/store/apps/details?id=com.pspace.vandroid" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            Virtual Android
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://play.google.com/store/apps/details?id=com.pspace.vandroid"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">
+                                Virtual Android
+                                <span class="badge rounded-pill badge-active ms-auto">Active</span>
+                            </div>
+                            <div class="tool-card-desc">Lightweight virtual Android environment on-device</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
                         </a>
                     </div>
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://drive.google.com/uc?id=18uy6qDK7kJKPbTgsguOpBMm9Q2HnDn4B&export=download" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            VPhoneGaGa
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://drive.google.com/uc?id=18uy6qDK7kJKPbTgsguOpBMm9Q2HnDn4B&export=download"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">
+                                VPhoneGaGa
+                                <span class="badge rounded-pill badge-active ms-auto">Active</span>
+                            </div>
+                            <div class="tool-card-desc">Virtual phone environment with advanced features</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
                         </a>
                     </div>
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://play.google.com/store/apps/details?id=com.redfinger.global" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            RedFinger
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://play.google.com/store/apps/details?id=com.redfinger.global"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">
+                                RedFinger
+                                <span class="badge rounded-pill badge-active ms-auto">Active</span>
+                            </div>
+                            <div class="tool-card-desc">Cloud-based Android emulator for multiple accounts</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
                         </a>
                     </div>
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://github.com/FSpaceCore/SpaceCore/releases" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            DualMeta
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://github.com/FSpaceCore/SpaceCore/releases"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">
+                                DualMeta
+                                <span class="badge rounded-pill badge-active ms-auto">Active</span>
+                            </div>
+                            <div class="tool-card-desc">SpaceCore-based dual-space Android container</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
                         </a>
                     </div>
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://4pda.to/forum/index.php?showtopic=1041895" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            Twoyi (Dead)
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://4pda.to/forum/index.php?showtopic=961828"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">
+                                Vmos Pro
+                                <span class="badge rounded-pill badge-active ms-auto">Active</span>
+                            </div>
+                            <div class="tool-card-desc">Full Android VM running inside Android with root support</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
                         </a>
                     </div>
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://4pda.to/forum/index.php?showtopic=961828" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            Vmos Pro
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://4pda.to/forum/index.php?showtopic=1004655"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">
+                                X8 Sandbox
+                                <span class="badge rounded-pill badge-active ms-auto">Active</span>
+                            </div>
+                            <div class="tool-card-desc">Sandboxed Android environment with virtualization</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
                         </a>
                     </div>
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://4pda.to/forum/index.php?showtopic=1004655" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            X8 Sandbox
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://4pda.to/forum/index.php?showtopic=1004655"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">
+                                F1 VM
+                                <span class="badge rounded-pill badge-active ms-auto">Active</span>
+                            </div>
+                            <div class="tool-card-desc">Android virtual machine for app isolation and testing</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
                         </a>
                     </div>
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://4pda.to/forum/index.php?showtopic=1004655" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            F1 VM
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://4pda.to/forum/index.php?showtopic=1041895"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">
+                                Twoyi
+                                <span class="badge rounded-pill badge-dead ms-auto">Dead</span>
+                            </div>
+                            <div class="tool-card-desc">Open-source Android container — no longer maintained</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
                         </a>
                     </div>
                 </div>
             </section>
 
-            <!-- Mobile Tools Section -->
-            <section id="mobile-tools">
-                <h2 class="category-title">🛠️ Mobile Tools</h2>
-                <div class="accordion mb-4">
+            <!-- ═══════════════════════════════════════════════════════════════
+                 Mobile Tools
+            ════════════════════════════════════════════════════════════════ -->
+            <section id="mobile-tools" class="mb-5">
+                <div class="section-heading">
+                    <i class="bi bi-tools"></i>Mobile Tools
+                </div>
+
+                <div class="accordion mb-4" id="accordionMobileTools">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-tools-info">
-                                What are Mobile Tools?
+                            <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#mobile-tools-info"
+                                    aria-expanded="false" aria-controls="mobile-tools-info">
+                                <i class="bi bi-info-circle me-2"></i>What are Mobile Tools?
                             </button>
                         </h2>
-                        <div id="mobile-tools-info" class="accordion-collapse collapse show">
-                            <div class="accordion-body">
-                                Mobile tools like <strong>MT Manager</strong> and <strong>APK Editor</strong> are essential for reverse engineering Android apps. These tools allow you to decompile, modify, and recompile APK files. <strong>MT Manager</strong> is particularly popular for its dual-pane interface, making it easy to compare and edit files. <strong>Signature Kill</strong> is another critical technique used to bypass app signature verification, allowing modified apps to run without issues.
+                        <div id="mobile-tools-info" class="accordion-collapse collapse" data-bs-parent="#accordionMobileTools">
+                            <div class="accordion-body text-body-secondary">
+                                Mobile-based tools let you decompile, patch, analyze, and recompile APKs <strong>directly on your Android device</strong> — no PC required. Tools like <strong>MT Manager</strong> and <strong>NP Manager</strong> offer powerful dual-pane editing, while analysis tools such as <strong>Http Canary</strong> and <strong>Reqable</strong> let you intercept and inspect network traffic in real time.
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- APK Editors & Patchers -->
+                <div class="subsection-heading"><i class="bi bi-pencil-square"></i>APK Editors &amp; Patchers</div>
+                <div class="row g-3 mb-2">
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://github.com/timscriptov/ApkEditor"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">ApkEditor Pro</div>
+                            <div class="tool-card-desc">Feature-rich APK editor for Android with decompile &amp; rebuild</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://github.com/AbdurazaaqMohammed/AXML-Editor"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">AXML Editor</div>
+                            <div class="tool-card-desc">Binary XML editor for Android manifest and resource files</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://gofile.io/d/YLU7pP"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">XML Editor</div>
+                            <div class="tool-card-desc">General-purpose XML editing tool for APK resources</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://4pda.to/forum/index.php?showtopic=548542"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">MT Manager</div>
+                            <div class="tool-card-desc">Dual-pane file manager with powerful APK editing capabilities</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://4pda.to/forum/index.php?showtopic=966965"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">NP Manager</div>
+                            <div class="tool-card-desc">APK editor with built-in signature patching support</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://maximoff.su/apktool/?lang=en"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">APKTOOL M</div>
+                            <div class="tool-card-desc">Mobile port of the popular Apktool for on-device use</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://github.com/Maximoff/AEPatcher"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">AEPatcher</div>
+                            <div class="tool-card-desc">Patch script runner for APK Editor</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://maximoff.su/mpatcher/"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">M-Patcher</div>
+                            <div class="tool-card-desc">Pattern-based APK patcher for automated modifications</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://4pda.to/forum/index.php?showtopic=882654"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">ApkToolPatcher</div>
+                            <div class="tool-card-desc">Automated APK patching utility with script support</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://github.com/AbdurazaaqMohammed/AntiSplit-M"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">Anti-Split</div>
+                            <div class="tool-card-desc">Merge split APKs (APKS/XAPK) into a single installable APK</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Smali & Java Tools -->
+                <div class="subsection-heading"><i class="bi bi-code-slash"></i>Smali &amp; Java Tools</div>
+                <div class="row g-3 mb-2">
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://smalihelper.blogspot.com/"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">Smali Helper</div>
+                            <div class="tool-card-desc">Helper utilities and snippets for Smali code editing</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://gofile.io/d/HDln2J"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">Java2Smali</div>
+                            <div class="tool-card-desc">Convert Java source code to Smali bytecode on-device</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://androidide.com"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">Android IDE</div>
+                            <div class="tool-card-desc">Full-featured IDE for Android development and analysis on-device</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Analysis & Debugging -->
+                <div class="subsection-heading"><i class="bi bi-bug"></i>Analysis &amp; Debugging</div>
+                <div class="row g-3 mb-2">
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://4pda.to/forum/index.php?showtopic=1037391"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">Apkanalyzer</div>
+                            <div class="tool-card-desc">APK analysis and inspection tool for structure examination</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://4pda.to/forum/index.php?showtopic=897774"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">Developer Assistant</div>
+                            <div class="tool-card-desc">Developer-oriented diagnostic and inspection tool</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://4pda.to/forum/index.php?showtopic=958291"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">Dev Tools Pro</div>
+                            <div class="tool-card-desc">Advanced developer utilities for runtime inspection</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://github.com/CodingGay/BlackDex"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">BlackDex</div>
+                            <div class="tool-card-desc">On-device DEX dumping tool to unpack protected/encrypted APKs</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://4pda.to/forum/index.php?showtopic=957572&st=60#entry92625117"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">Http Canary</div>
+                            <div class="tool-card-desc">HTTP/HTTPS traffic capture and analysis tool for Android</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://play.google.com/store/apps/details?id=com.reqable.android"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">Reqable</div>
+                            <div class="tool-card-desc">Modern API debugging and HTTP traffic analysis tool</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Patchers & Misc -->
+                <div class="subsection-heading"><i class="bi bi-patch-check"></i>Patchers &amp; Misc</div>
                 <div class="row g-3">
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://github.com/timscriptov/ApkEditor" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            ApkEditor Pro
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://jasi2169.com/jasi-patcher/"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">Jasi Patcher</div>
+                            <div class="tool-card-desc">Universal patcher for Android apps with extensive patch library</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
                         </a>
                     </div>
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://github.com/AbdurazaaqMohammed/AXML-Editor" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            AXML Editor
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://4pda.to/forum/index.php?showtopic=298302"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">Lucky Patcher</div>
+                            <div class="tool-card-desc">App patcher for modifying permissions and in-app purchases</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
                         </a>
                     </div>
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://gofile.io/d/YLU7pP" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            XML Editor
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://www.pling.com/p/2175692"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">Ads Regex</div>
+                            <div class="tool-card-desc">Regex-based patterns for removing ad SDKs from APKs</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
                         </a>
                     </div>
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://jasi2169.com/jasi-patcher/" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            Jasi Patcher
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://4pda.to/forum/index.php?showtopic=1037391" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            Apkanalyzer
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://4pda.to/forum/index.php?showtopic=548542" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            MT Manager
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://4pda.to/forum/index.php?showtopic=966965" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            NP Manager
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://maximoff.su/apktool/?lang=en" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            APKTOOL M
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://4pda.to/forum/index.php?showtopic=575450&view=findpost&p=62744086"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">Patches</div>
+                            <div class="tool-card-desc">Community-contributed patch collection for popular apps</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
                         </a>
                     </div>
                 </div>
             </section>
 
-            <!-- PC Tools Section -->
-            <section id="pc-tools">
-                <h2 class="category-title">💻 PC Tools</h2>
-                <div class="accordion mb-4">
+            <!-- ═══════════════════════════════════════════════════════════════
+                 PC Tools
+            ════════════════════════════════════════════════════════════════ -->
+            <section id="pc-tools" class="mb-5">
+                <div class="section-heading">
+                    <i class="bi bi-pc-display"></i>PC Tools
+                </div>
+
+                <div class="accordion mb-4" id="accordionPcTools">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#pc-tools-info">
-                                What are PC Tools?
+                            <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#pc-tools-info"
+                                    aria-expanded="false" aria-controls="pc-tools-info">
+                                <i class="bi bi-info-circle me-2"></i>What are PC Tools?
                             </button>
                         </h2>
-                        <div id="pc-tools-info" class="accordion-collapse collapse show">
-                            <div class="accordion-body">
-                                PC tools like <strong>Apktool</strong> and <strong>DEX2JAR</strong> are widely used for reverse engineering Android apps on desktop platforms. These tools allow you to decompile APKs, analyze Smali code, and convert DEX files to JAR for easier analysis. <strong>Smali</strong> is the human-readable representation of Dalvik bytecode, which is used to modify app behavior at a low level.
+                        <div id="pc-tools-info" class="accordion-collapse collapse" data-bs-parent="#accordionPcTools">
+                            <div class="accordion-body text-body-secondary">
+                                Desktop tools provide advanced APK analysis, decompilation, and reverse engineering on <strong>Windows, macOS, and Linux</strong>. Tools like <strong>Apktool</strong> and <strong>DEX2JAR</strong> are industry standards for decoding and rebuilding APKs, while <strong>Cutter</strong> and <strong>Bytecode Viewer</strong> offer deeper binary and bytecode analysis. <strong>Smali</strong> is the human-readable Dalvik bytecode representation used to modify app behavior at a low level.
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="row g-3">
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://github.com/REAndroid/APKEditor" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            APKEditor
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://github.com/REAndroid/APKEditor"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">APKEditor</div>
+                            <div class="tool-card-desc">Powerful cross-platform APK editor with advanced features</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
                         </a>
                     </div>
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://github.com/Gameye98/DTL-X" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            DTL-X
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://ibotpeaches.github.io/Apktool/"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">Apktool</div>
+                            <div class="tool-card-desc">Industry-standard tool for decoding and rebuilding APKs</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
                         </a>
                     </div>
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://github.com/MrIkso/ApkRepacker" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            ApkRepacker
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://github.com/pxb1988/dex2jar"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">DEX2JAR</div>
+                            <div class="tool-card-desc">Convert Android DEX files to JAR for Java decompilation</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
                         </a>
                     </div>
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://github.com/MrIkso/ArscEditor" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            ArscEditor
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://github.com/Konloch/bytecode-viewer"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">Bytecode Viewer</div>
+                            <div class="tool-card-desc">Java &amp; Android bytecode viewer with multiple decompilers</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
                         </a>
                     </div>
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://github.com/rizinorg/cutter" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            Cutter
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://github.com/rizinorg/cutter"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">Cutter</div>
+                            <div class="tool-card-desc">Free and open-source reverse engineering platform powered by Rizin</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
                         </a>
                     </div>
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://ibotpeaches.github.io/Apktool/" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            Apktool
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://github.com/vaibhavpandeyvpz/apkstudio"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">Apk Studio</div>
+                            <div class="tool-card-desc">Cross-platform IDE for decompiling and rebuilding Android APKs</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
                         </a>
                     </div>
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://github.com/pxb1988/dex2jar" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            DEX2JAR
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://forum.xda-developers.com/t/tool-windows-apk-easy-tool-v1-59-2-2021-04-03.3333960/"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">APK Easy Tool</div>
+                            <div class="tool-card-desc">User-friendly GUI wrapper for Apktool on Windows</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
                         </a>
                     </div>
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://github.com/vaibhavpandeyvpz/apkstudio" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            Apk Studio
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://github.com/MrIkso/ApkRepacker"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">ApkRepacker</div>
+                            <div class="tool-card-desc">Simple GUI tool for unpacking and repacking APKs</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://github.com/MrIkso/ArscEditor"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">ArscEditor</div>
+                            <div class="tool-card-desc">Editor for Android binary resource (.arsc) files</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://github.com/Gameye98/DTL-X"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">DTL-X</div>
+                            <div class="tool-card-desc">Dalvik tool for analyzing and patching DEX files</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
                         </a>
                     </div>
                 </div>
             </section>
 
-            <!-- Learning Resources Section -->
-            <section id="learning">
-                <h2 class="category-title">📚 Resources</h2>
-                <div class="accordion mb-4">
+            <!-- ═══════════════════════════════════════════════════════════════
+                 Learning Resources
+            ════════════════════════════════════════════════════════════════ -->
+            <section id="learning" class="mb-5">
+                <div class="section-heading">
+                    <i class="bi bi-book"></i>Tutorials &amp; Learning Resources
+                </div>
+
+                <div class="accordion mb-4" id="accordionLearning">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#learning-info">
-                                What is Reverse Engineering?
+                            <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#learning-info"
+                                    aria-expanded="false" aria-controls="learning-info">
+                                <i class="bi bi-info-circle me-2"></i>What is Reverse Engineering?
                             </button>
                         </h2>
-                        <div id="learning-info" class="accordion-collapse collapse show">
-                            <div class="accordion-body">
-                                Reverse engineering is the process of analyzing software to understand its functionality and behavior. Tools like <strong>Smali</strong> and <strong>IDA Pro</strong> are commonly used to decompile and analyze Android apps. Learning resources such as the <strong>Smali Basics Guide</strong> and <strong>Practical Reverse Engineering</strong> provide in-depth knowledge for beginners and advanced users alike.
+                        <div id="learning-info" class="accordion-collapse collapse" data-bs-parent="#accordionLearning">
+                            <div class="accordion-body text-body-secondary">
+                                Reverse engineering is the process of <strong>analyzing software to understand its internal structure, functionality, and behavior</strong> — without access to the original source code. In the Android context it typically involves decompiling APK files to inspect Smali/Java code, modifying app behavior using patching tools, analyzing network traffic and app resources, and understanding signature verification bypasses. The resources below cover everything from beginner Smali fundamentals to advanced binary analysis.
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="row g-3">
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://github.com/OshekharO/Reverse-Engineering/wiki" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            Smali Basics Guide
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://github.com/OshekharO/Reverse-Engineering/wiki"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">Understand Smali</div>
+                            <div class="tool-card-desc">Beginner-friendly guide to reading and writing Smali code — by AbhiTheModder</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
                         </a>
                     </div>
-                    <div class="col-md-4 col-lg-3">
-                        <a href="http://www.wiley.com/WileyCDA/WileyTitle/productCd-1118787315.html" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            Practical Reverse Engineering
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://www.wiley.com/WileyCDA/WileyTitle/productCd-1118787315.html"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">Practical Reverse Engineering</div>
+                            <div class="tool-card-desc">Comprehensive book covering x86, x64, ARM, and kernel-mode debugging — Bruce Dang et al.</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
                         </a>
                     </div>
-                    <div class="col-md-4 col-lg-3">
-                        <a href="http://beginners.re/" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            Understanding Assembly Language
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://beginners.re/"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">Reverse Engineering for Beginners</div>
+                            <div class="tool-card-desc">Free book covering assembly language and RE fundamentals — Dennis Yurichev</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
                         </a>
                     </div>
-                    <div class="col-md-4 col-lg-3">
-                        <a href="https://nostarch.com/idapro2.htm" target="_blank" class="d-block p-3 bg-body-secondary text-decoration-none list-item">
-                            IDA Pro Book
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://nostarch.com/idapro2.htm"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">The IDA Pro Book</div>
+                            <div class="tool-card-desc">In-depth guide to using IDA Pro for binary analysis — Chris Eagle</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://github.com/0x4143/malware-gems"
+                           target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name">Malware Gems</div>
+                            <div class="tool-card-desc">Curated collection of malware analysis and reverse engineering references</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
                         </a>
                     </div>
                 </div>
             </section>
+
+            <!-- ═══════════════════════════════════════════════════════════════
+                 Community
+            ════════════════════════════════════════════════════════════════ -->
+            <section id="community" class="mb-5">
+                <div class="section-heading">
+                    <i class="bi bi-people"></i>Community
+                </div>
+                <div class="row g-3">
+                    <div class="col-sm-6 col-md-4">
+                        <a href="https://4pda.to/" target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name"><i class="bi bi-globe2 me-2 text-primary"></i>4PDA Forums</div>
+                            <div class="tool-card-desc">Large Russian-language community with extensive Android modding and reverse engineering discussions</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <a href="https://github.com/OshekharO/Reverse-Engineering" target="_blank" rel="noopener noreferrer" class="tool-card">
+                            <div class="tool-card-name"><i class="bi bi-github me-2 text-primary"></i>This Repository</div>
+                            <div class="tool-card-desc">Contribute tools, resources, or improvements via a Pull Request on GitHub</div>
+                            <i class="bi bi-box-arrow-up-right tool-card-link-icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════════════════════════════════════════════════════════════
+                 Disclaimer
+            ════════════════════════════════════════════════════════════════ -->
+            <section id="disclaimer" class="mb-5">
+                <div class="alert alert-warning d-flex gap-3" role="alert">
+                    <i class="bi bi-exclamation-triangle-fill flex-shrink-0 fs-4 mt-1"></i>
+                    <div>
+                        <h5 class="alert-heading fw-bold mb-2">Disclaimer</h5>
+                        <p class="mb-1">The tools and resources listed in this repository are collected from publicly available sources for <strong>educational purposes only</strong>.</p>
+                        <ul class="mb-0 ps-3">
+                            <li>These applications were <strong>not created</strong> by the repository maintainer.</li>
+                            <li>The maintainer is <strong>not liable</strong> for any misuse, damages, or legal issues arising from the use of these tools.</li>
+                            <li>Always ensure you have <strong>proper authorization</strong> before reverse engineering any application.</li>
+                            <li>Reverse engineering proprietary software may violate the application's Terms of Service or applicable laws in your jurisdiction.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
         </main>
 
-        <footer class="text-center mt-5 py-4 text-body-secondary">
-            <p>Made with ❤️ by <a href="https://github.com/OshekharO" class="text-decoration-none">OshekharO</a></p>
-            <small>Hosted on GitHub</small>
+        <footer class="text-center mt-4 py-4 text-body-secondary">
+            <p class="mb-1">
+                Made with <span aria-label="love">❤️</span> by
+                <a href="https://github.com/OshekharO" class="text-decoration-none fw-semibold"
+                   target="_blank" rel="noopener noreferrer">OshekharO</a>
+            </p>
+            <small>
+                <a href="https://github.com/OshekharO/Reverse-Engineering" class="text-decoration-none text-body-secondary"
+                   target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github me-1"></i>Hosted on GitHub
+                </a>
+            </small>
         </footer>
     </div>
 
+    <!-- Back to top -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="bi bi-chevron-up"></i>
+    </button>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Back-to-top visibility
+        const btn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            btn.classList.toggle('visible', window.scrollY > 400);
+        }, { passive: true });
+        btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // Highlight active nav link on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+                    });
+                }
+            });
+        }, { rootMargin: '-30% 0px -60% 0px' });
+        sections.forEach(s => observer.observe(s));
+    </script>
 </body>
 </html>
