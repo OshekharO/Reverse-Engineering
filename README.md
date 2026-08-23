@@ -134,6 +134,7 @@ Desktop tools for advanced APK analysis, decompilation, and reverse engineering 
 | [ApkRepacker](https://github.com/MrIkso/ApkRepacker) | Simple GUI tool for unpacking and repacking APKs |
 | [ArscEditor](https://github.com/MrIkso/ArscEditor) | Editor for Android binary resource (`.arsc`) files |
 | [DTL-X](https://github.com/Gameye98/DTL-X) | Dalvik tool for analyzing and patching DEX files |
+| [fnprint](https://github.com/1rhino2/fnprint) | Behavioral function fingerprinting for stripped ELF binaries; names functions and patch-diffs builds by microexecution |
 
 ---
 
